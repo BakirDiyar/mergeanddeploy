@@ -35,6 +35,7 @@ section{padding: 60px 36px;}
 .text{
     color: #8b8b8b;
     font-weight: 100;
+    font-size: 18px;
 }
 
 .navbar{
@@ -186,8 +187,9 @@ section{padding: 60px 36px;}
 }
 
 .t-us{
-    font-size: 16px;
+    font-size: 20px;
     margin-top: 70px;
+    font-weight: 800;
 }
 
 .content-us{ margin-bottom: 50px;}
