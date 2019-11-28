@@ -26,6 +26,8 @@
     background  : #fff;
 }
 
+section{padding: 60px 28px;}
+
 .title{
     font-weight: 300;
 }
@@ -172,17 +174,21 @@
     background-color: #143d59;
     overflow: hidden;
     border-radius: 0px 0px 67px 82px;
-    height: 288px;
-    width: 202px;
+    height: 351px;
+    width: 261px;
     margin: 0 auto;
     position: relative;
     top: -19px;
     color: #2f3341a6;
     font-size: 15px !important;
     box-shadow: 0px 47px 93px 0 #7b8e9a;
+
 }
 
-.t-us{font-size: 14px;}
+.t-us{
+    font-size: 16px;
+    margin-top: 70px;
+}
 
 .content-us{ margin-bottom: 50px;}
 
@@ -318,6 +324,13 @@
     box-shadow: none;
 } */
 
+.contact{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
 .form{
     width: 90%;
     text-align: center;
@@ -400,7 +413,7 @@
 
 
 @media screen and (min-width:768px){
-    section{padding: 60px 0;}
+    
     .card-service{width: 250px;}
     .wrp-img{height: 500px;}
 }
