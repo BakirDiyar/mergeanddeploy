@@ -4,6 +4,10 @@ function Effects(el){
     this.element = el
 }
 
+
+function Mapa(config){
+    this.coords = config
+}
 Effects.prototype.stickyMenu= function(){
     this.element.addEventListener('scroll', ()=>{
         let offY = window.pageYOffset
@@ -15,11 +19,34 @@ Effects.prototype.stickyMenu= function(){
     })
 }
 
-function Mapa(config){
-    this.coords = config
+Effects.prototype.slides = async function(){
+    
+    let count = 1
+
+    setInterval(() => {
+        count++
+
+        if(count > 8){
+            count=1
+        }
+
+        let listClass = this.element.classList
+        if(listClass.length>1){
+            this.element.classList.remove(listClass[1])
+            this.element.classList.add('slide'+count)
+        }else{
+            this.element.classList.add('slide'+count)
+
+        }
+       
+      
+        console.log(count);
+    }, 2000);
+
 }
 
-Effects.prototype.clip = function(){
+var a = new Array().length
+Effects.prototype.clip = async function(){
     setTimeout(()=>   this.element.classList.add('clip-active'), 3000)
  
 }
@@ -40,8 +67,9 @@ Mapa.prototype.insertMap = async function(){
 let menu = document.querySelector('#menu')
 let home = document.querySelector('.home')
 let efect = new Effects(window)
-let clip = new Effects(home)
+let homepage = new Effects(home)
 efect.stickyMenu()
+homepage.slides()
 
 let map = new Mapa({lat: -33.4889868, lng: -70.6002032})
 map.insertMap()
