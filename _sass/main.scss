@@ -1,0 +1,400 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+/*
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+// 2. Set your own initial variables
+// Update the blue shade, used for links
+$blue: #06bcef;
+// Add pink and its invert
+$pink: #ff8080;
+$pink-invert: #fff;
+// Update the sans-serif font family
+$family-sans-serif: "Helvetica", "Arial", sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $pink;
+$primary-invert: $pink-invert;
+
+// 4. Import the rest of Bulma
+*/
+
+@import "../node_modules/bulma/bulma";
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+@import "../node_modules/bulma/sass/utilities/functions";
+$yellow: #F4B41A;
+$grey: #E8E8E8;
+$strong-grey: rgb(194, 194, 194);
+$primary: hsl(221, 61%, 54%);
+
+
+body{
+    background-color: #ffffff;
+    background-image: linear-gradient(60deg, #ffffff 0%, #d7e1ec 74%);
+}
+.myd-navbar{
+    padding-bottom: 1%;
+}
+.button-primary{
+    background-color: $primary;
+    color: #fff;
+    border: 1px solid $primary;
+    &:hover{
+        background-color: $yellow !important;
+        color: $primary;
+        border: 1px solid $yellow;
+    }
+}
+.button-secondary{
+    background-color: $yellow;
+    color: #ffffff;
+    font-weight: bold;
+    &:hover{
+        background-color: $primary !important;
+        color: $primary;
+        border: 1px solid $primary;
+    }
+}    
+.typewriter {
+    color: $yellow !important;
+}
+.service-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    img{
+        max-width: 60%;
+    }
+}
+.likeCode-indent{
+    border-left: 2px solid $strong-grey;
+    padding-left: 5%;
+    max-width: 90%;
+    margin-bottom: 3% !important;
+}
+.devicon-git-plain {
+    max-width: 2.7em;
+    margin-right: 3%;
+  }
+.devicon-git-plain path {
+    fill: #4370D2;
+  }
+  .tech-icons{
+      margin-left: 2%;
+      margin-top: 2%;
+  }
+
+@media screen and (min-width: 200px) and (max-width: 800px){
+    .myd-navbar{
+        position: fixed !important;
+        width: 100vw;
+        .burger{
+            margin-top: 4%;
+        }
+    }
+    .btn-project{
+        display: none;
+    }
+    .tech-icons{
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+    .reverse{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .likeCode-indent{
+        margin-left: 7%;
+    }
+    #hero-section{
+        width: 100vw;
+        height: 95vh;
+        background-image: url('../assets/hero_image_desktop.svg');
+        background-repeat: no-repeat;
+        background-size: 300px;
+        background-position: bottom right;
+        .columns{
+            .cta{
+                padding-top: 20%;
+                .button{
+                    margin-left: 10%;
+                }
+                .title{
+                    padding: 5% 7% ;
+                    font-size: 2.3em;
+                }
+                .hero-desc{
+                    margin-top: 5%;
+                }
+            }
+        }
+    }
+    .page-section{
+        width: 100vw;
+    }
+    #services{
+        padding-top: 10%;
+        .title{
+            margin-bottom: 10%;
+        }
+        .card-column{
+            padding: 5%;
+        }
+    }
+    #about{
+        padding: 15% 5% 30% 5%;
+        .columns{
+            .about-img{
+                margin-top: 10%;
+            }
+            .column{
+                .title{
+                    margin-bottom: 20%;
+                }
+            }
+        }
+    }
+    #tech{
+        padding: 5%;
+        height: 100vh;
+        margin-bottom: 5%;
+        .columns{
+            .desc{
+                .title{
+                    margin-bottom: 10%
+                }
+            }
+        }
+    }
+    .portfolio{
+        .title{
+            margin-bottom: 5%;
+        }
+        padding: 5%;
+        padding-top: 25%;
+        .project{
+            .project-desc{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .project-title{
+                    font-size: 2.3em;
+                    font-weight: bold;
+                    margin-bottom: 5%;
+                }
+                .btn-project{
+                    max-width: 40%;
+                    background-color: $yellow;
+                    color: $grey;
+                }
+            }
+        }
+    }
+    #contact{
+        padding: 10% 0% 0% 0%;
+        display: flex;
+        flex-direction: column;
+        .title{
+            margin-bottom: 5%;
+        }
+        .footer-myd{
+            align-self: flex-end !important;
+            height: 10vh;
+            text-align: center;
+            padding-top: 2.5%;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1407px){
+    .page-section{
+        width: 100vw;
+        height: 100vh;
+    }
+    .dots-left {
+        left: 15px !important;
+    }
+    
+    #hero-section{
+        background-image: url('../assets/hero_image_desktop.svg');
+        background-repeat: no-repeat;
+        background-size: 20%;
+        background-size: 630px;
+        background-position: bottom right;
+        .columns{
+            .cta{
+                padding-top: 13%;
+                padding-left: 5%;
+                .hero-desc{
+                    margin-top: 5%;
+                }
+            }
+        }
+    }
+    .page-section{
+        width: 100vw;
+        height: 100vh;
+    }
+    #services{
+        padding-top: 5%;
+        .title{
+            margin-bottom: 5%;
+        }
+    }
+    #about{
+        padding-top: 5%;
+    }
+    #tech{
+        padding-top: 0;
+        .columns{
+            .desc{
+                padding-top: 10%;
+                padding-left: 5%;
+                .title{
+                    margin-bottom: 10%
+                }
+            }
+        }
+    }
+    .portfolio{
+        margin-left: 5%;
+        .title{
+            margin-bottom: 0;
+        }
+        padding-top: 5%;
+        .project{
+            .project-desc{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 5%;
+                .project-title{
+                    font-size: 2.3em;
+                    font-weight: bold;
+                    margin-bottom: 5%;
+                }
+                .btn-project{
+                    max-width: 40%;
+                    background-color: $yellow;
+                    color: $grey;
+                }
+            }
+        }
+    }
+    #contact{
+        padding-top: 5%;
+        display: flex;
+        flex-direction: column;
+        .title{
+            margin-bottom: 5%;
+        }
+        .myd-footer{
+            background-color: $primary;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 999;
+            width: 100vw;
+        }
+        .is-two-fifths{
+            margin-left: 5%;
+        }
+    }
+}
+
+@media screen and (min-width: 1408px){
+    .page-section{
+        width: 100vw;
+        height: 100vh;
+    }
+    #hero-section{
+        background-image: url('../assets/hero_image_desktop.svg');
+        background-repeat: no-repeat;
+        background-size: 900px;
+        background-position: bottom right;
+        .columns{
+            .cta{
+                padding-top: 20%;
+                .hero-desc{
+                    margin-top: 5%;
+                }
+            }
+        }
+    }
+    .page-section{
+        width: 100vw;
+        height: 100vh;
+    }
+    #services{
+        padding-top: 7%;
+        .title{
+            margin-bottom: 10%;
+        }
+    }
+    #about{
+        padding-top: 10%;
+    }
+    #tech{
+        padding-top: 10%;
+        .columns{
+            .desc{
+                padding-top: 5%;
+                .title{
+                    margin-bottom: 10%
+                }
+            }
+        }
+    }
+    .portfolio{
+        .title{
+            margin-bottom: 3%;
+        }
+        padding-top: 5%;
+        .project{
+            .project-desc{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .project-title{
+                    font-size: 2.3em;
+                    font-weight: bold;
+                    margin-bottom: 5%;
+                }
+                .btn-project{
+                    max-width: 40%;
+                    background-color: $yellow;
+                    color: $grey;
+                }
+            }
+        }
+    }
+    #contact{
+        padding-top: 10%;
+        display: flex;
+        flex-direction: column;
+        .title{
+            margin-bottom: 5%;
+        }
+    }
+}
+
+.footer-myd{
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    background-color: $primary;
+    color: #ffffff;
+    border: none;
+    align-items: flex-start;
+    padding-top: 1%;
+}
