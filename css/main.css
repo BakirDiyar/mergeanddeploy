@@ -7319,7 +7319,7 @@ body {
         background-color: #F4B41A;
         color: #E8E8E8; }
   #contact {
-    padding-top: 5%;
+    padding-top: 4%;
     display: flex;
     flex-direction: column; }
     #contact .title {
@@ -7330,7 +7330,8 @@ body {
       bottom: 0;
       left: 0;
       z-index: 999;
-      width: 100vw; }
+      width: 100vw;
+      padding-top: 1px !important; }
     #contact .is-two-fifths {
       margin-left: 5%; } }
 
@@ -7383,7 +7384,17 @@ body {
     display: flex;
     flex-direction: column; }
     #contact .title {
-      margin-bottom: 5%; } }
+      margin-bottom: 5%; }
+    #contact .footer-myd {
+      width: 100vw;
+      height: 12vh;
+      display: flex;
+      justify-content: center;
+      background-color: #426fd1;
+      color: #ffffff;
+      border: none;
+      align-items: flex-start;
+      padding-top: 16px; } }
 
 .footer-myd {
   width: 100vw;
@@ -7394,4 +7405,4 @@ body {
   color: #ffffff;
   border: none;
   align-items: flex-start;
-  padding-top: 1%; }
+  padding-top: 6px; }
